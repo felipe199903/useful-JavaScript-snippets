@@ -198,3 +198,20 @@ Output -->
 4
 1
 ```
+
+14 - Set a variable default
+
+The “||” operator will, just like inside an if statement, work as an OR operator.
+
+```
+doSomethingVeryCool = (coolParameter) => {
+   const coolThing = coolParameter || "This is not so cool"
+   console.log(coolThing);
+}
+
+doSomethingVeryCool("This is super cool") 
+// Result: "This is super cool"
+
+doSomethingVeryCool() 
+// Result: "This is not so cool"
+```
