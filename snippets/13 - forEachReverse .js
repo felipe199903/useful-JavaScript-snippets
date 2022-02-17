@@ -12,7 +12,7 @@ var array = [1, 2, 3, 4];
 
 forEachReverse(array, val => console.log(calculateSquare(val)));
 
-Output --> 
+Output -->
 16
 9
 4

@@ -7,6 +7,6 @@ const arrayDiff = (array1, array2) => {
   var justiceLeaque = arrayDiff(heroes, ['Wolverine']);
 
   console.log(justiceLeaque);
-  
+
   Output -->
   [ 'Batman', 'Flash', 'Superman' ]

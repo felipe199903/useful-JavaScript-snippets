@@ -35,7 +35,7 @@ console.log(isNullOrUndefined('Batman'));    // false
 Assigning Default Value to Object
 
 ```
-const setDefaultObject = (obj, ...defs) => 
+const setDefaultObject = (obj, ...defs) =>
          Object.assign({}, obj, ...defs.reverse(), obj);
 
 setDefaultObject({ hero: 'Batman' }, { villain: 'Joker' });
@@ -52,8 +52,8 @@ const smoothScroll = element =>
   });
 
 // scrolls smoothly to the element with the id elementID
-smoothScroll('#elementID');  
-            
+smoothScroll('#elementID');
+
 // scrolls smoothly to the first element with class name - elementClassName
 smoothScroll('.elementClassName');
 ```
@@ -77,7 +77,7 @@ Batman arrives..!!!
 Returns elements present in both the arrays.
 
 ```
-const matchingElements = (array1, array2) => 
+const matchingElements = (array1, array2) =>
              array1.filter(element => array2.includes(element));
 
 var heroes = ['Batman', 'Superman', 'X-Men', 'Captain America'];
@@ -132,11 +132,11 @@ const splitLines = str => str.split(/\r?\n/);
 
 console.log(splitLines('First Line\nSecond Line\nThird Line\nFourth Line'));
 
-Output --> 
+Output -->
 [ 'First Line', 'Second Line', 'Third Line', 'Fourth Line' ]
 ```
 
-10 - elementContains 
+10 - elementContains
 
 Check whether the respective child element is present in the parent element or not.
 
@@ -170,10 +170,10 @@ const findLast = (array, func) => array.filter(func).pop();
 
 console.log(findLast([1, 2, 3, 4, 5], num => num % 2 === 0));
 
-Output --> 
+Output -->
 4
 ```
-13 - forEachReverse 
+13 - forEachReverse
 
 Executes a function on each element of an array starting from the end ie. from array’s last element.
 
@@ -192,7 +192,7 @@ var array = [1, 2, 3, 4];
 
 forEachReverse(array, val => console.log(calculateSquare(val)));
 
-Output --> 
+Output -->
 16
 9
 4
@@ -209,10 +209,10 @@ doSomethingVeryCool = (coolParameter) => {
    console.log(coolThing);
 }
 
-doSomethingVeryCool("This is super cool") 
+doSomethingVeryCool("This is super cool")
 // Result: "This is super cool"
 
-doSomethingVeryCool() 
+doSomethingVeryCool()
 // Result: "This is not so cool"
 ```
 
@@ -222,4 +222,12 @@ doSomethingVeryCool()
 const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
 console.log(shuffleArray([1, 2, 3, 4]));
 // Result: [ 1, 4, 3, 2 ]
+```
+
+16 - Check if Date is Valid
+
+```
+const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
+isDateValid("December 17, 1995 03:24:00");
+// Result: true
 ```
